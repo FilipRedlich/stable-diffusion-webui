@@ -240,6 +240,9 @@ def webui():
         shared.demo = modules.ui.create_ui()
         startup_timer.record("create ui")
 
+        import webbrowser
+        webbrowser.open('http://127.0.0.1:7860')
+
         if cmd_opts.gradio_queue:
             shared.demo.queue(64)
 
